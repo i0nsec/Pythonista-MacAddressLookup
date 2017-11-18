@@ -8,3 +8,5 @@ The database contains 21,896 Mac vendors.
 
 - App Version: 1.0
 - Database Version: 06142017
+
+@[I0nsec](https://twitter.com/i0nsec "I0nsec")
