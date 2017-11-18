@@ -1,0 +1,291 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {345, 108.5}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "A481D4B7-DAEC-4A60-B933-43650F92E5B8",
+          "flex" : "WHB",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(0.205128,0.336996,0.666667,1.000000)",
+          "frame" : "{{98, 237}, {150, 32}}",
+          "tint_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "border_color" : "RGBA(0.022472,0.022472,0.022472,1.000000)",
+          "border_width" : 1,
+          "alignment" : "center",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "text" : "Enter Mac Address to lookup",
+          "font_name" : "AvenirNext-Bold",
+          "class" : "Label",
+          "name" : "main-label",
+          "font_size" : 20
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 187.5}, {265, 49.5}}",
+        "class" : "TextField",
+        "attributes" : {
+          "uuid" : "903ABA21-B0D7-40E7-9997-BC5328CF0C63",
+          "font_size" : 17,
+          "frame" : "{{73, 237}, {200, 32}}",
+          "custom_attributes" : "",
+          "alignment" : "center",
+          "autocorrection_type" : "default",
+          "placeholder" : "XX:XX:XX:XX:XX:XX",
+          "font_name" : "AvenirNext-Bold",
+          "spellchecking_type" : "default",
+          "class" : "TextField",
+          "name" : "user-input",
+          "flex" : "WHTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{89, 245}, {170, 35}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "D3CE174A-13BA-4EFB-A574-35AD48770DE7",
+          "name" : "button1",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(0.998127,0.998127,0.998127,1.000000)",
+          "frame" : "{{133, 237}, {80, 32}}",
+          "border_width" : 1,
+          "title" : "Lookup",
+          "action" : "__Main__",
+          "alpha" : 1,
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:ios7_search_24",
+          "flex" : "WHTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 356.5}, {120, 34.5}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "CFCD83E2-C34D-4182-B08D-F8791EA697C7",
+          "name" : "button2",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{133, 237}, {80, 32}}",
+          "border_width" : 1,
+          "title" : "Copy",
+          "action" : "Copy",
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:ios7_copy_24",
+          "flex" : "WHRTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{185, 356.5}, {120, 34.5}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "CFCD83E2-C34D-4182-B08D-F8791EA697C7",
+          "name" : "button2",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{133, 237}, {80, 32}}",
+          "border_width" : 1,
+          "title" : "History",
+          "action" : "History",
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:filing_24",
+          "flex" : "WHLTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 399}, {120, 34.5}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "CFCD83E2-C34D-4182-B08D-F8791EA697C7",
+          "name" : "button2",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{133, 237}, {80, 32}}",
+          "border_width" : 1,
+          "title" : "Share",
+          "action" : "Share",
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:share_24",
+          "flex" : "WHRTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{185, 399}, {120, 34.5}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "CFCD83E2-C34D-4182-B08D-F8791EA697C7",
+          "name" : "button2",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{133, 237}, {80, 32}}",
+          "border_width" : 1,
+          "title" : "Generate",
+          "action" : "Generate_mac",
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:gear_a_24",
+          "flex" : "WHLTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 148}, {265, 31.5}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHTB",
+          "font_size" : 15,
+          "font_name" : "AvenirNext-Bold",
+          "frame" : "{{98, 237}, {150, 32}}",
+          "uuid" : "8812C20E-3FAC-4A30-8920-D9A19478F24D",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Ex. 11:22:33, 11:22:33:44:55:66",
+          "name" : "label1",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{89, 298}, {170, 35}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "D3CE174A-13BA-4EFB-A574-35AD48770DE7",
+          "name" : "button1",
+          "font_size" : 15,
+          "corner_radius" : 5,
+          "background_color" : "RGBA(0.998127,0.998127,0.998127,1.000000)",
+          "frame" : "{{133, 237}, {80, 32}}",
+          "border_width" : 1,
+          "title" : "Clear",
+          "action" : "Clear",
+          "alpha" : 1,
+          "font_bold" : true,
+          "class" : "Button",
+          "image_name" : "iob:close_circled_24",
+          "flex" : "WHTB"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 448}, {345, 58}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "D8CB4D0C-B71E-4873-BB87-7DAF3FC799A9",
+          "font_size" : 6,
+          "corner_radius" : 0,
+          "background_color" : "RGBA(0.203922,0.337255,0.666667,1.000000)",
+          "frame" : "{{98, 237}, {150, 32}}",
+          "tint_color" : "RGBA(0.033708,0.033708,0.033708,1.000000)",
+          "number_of_lines" : 0,
+          "border_color" : "RGBA(0.217228,0.217228,0.217228,1.000000)",
+          "border_width" : 0,
+          "alignment" : "left",
+          "text_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "text" : "",
+          "font_name" : "<System>",
+          "class" : "Label",
+          "name" : "  ",
+          "flex" : "WHTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 457.5}, {265, 18.5}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHTB",
+          "name" : "label3",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{98, 237}, {150, 32}}",
+          "uuid" : "888EC97B-2F51-4B60-AC92-82BF6BA6BF30",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Database: v06102017, Vendors: 21,896",
+          "font_size" : 13,
+          "font_name" : "AvenirNext-Bold"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 478}, {265, 22}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHTB",
+          "name" : "label4",
+          "font_name" : "AvenirNext-Bold",
+          "frame" : "{{98, 237}, {150, 32}}",
+          "uuid" : "18FB16A7-AEA2-4773-AC45-8B81C5A14918",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "MD5:D41D8CD98F00B204E9800998ECF8427E",
+          "font_size" : 12,
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {345, 500}}",
+    "class" : "View",
+    "attributes" : {
+      "flex" : "",
+      "custom_class" : "",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : "Mac Address"
+    },
+    "selected" : false
+  }
+]
