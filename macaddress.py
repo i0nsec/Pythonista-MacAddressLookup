@@ -15,7 +15,7 @@ Copy = False
 
 def GEN_LOG(err_msg):
 	
-	# Log all errors in GEN_LOG file
+	# Log errors to a log file
 	try:
 		with open('ERR_LOG', 'a') as LOG_F:
 			LOG_F.write(str(err_msg)+'\n')
