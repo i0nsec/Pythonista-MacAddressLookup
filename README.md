@@ -1,5 +1,4 @@
-## Mac Address Lookup v1.0.2
-
+## Mac Address Lookup
 I made this small app to generate Mac addresses because I'm always changing my Mac address, or to lookup a Mac I found during a network scan. 
 
 To use this app, you will need to download the [Pythonista 3](https://itunes.apple.com/us/app/pythonista-3/id1085978097?mt=8 "Pythonista 3") app from the Apple App Store.
