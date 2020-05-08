@@ -5,8 +5,8 @@ To use this app, you will need to download the [Pythonista 3](https://itunes.app
 The database contains 21,896 vendors. 
 
 With this app you can:
-  1. Generate a random Mac address
-  2. Lookup a Mac address in a database
+        1. Generate a random Mac address
+        2. Lookup a Mac address in a database
   
 - App Version: 1.0.2
 - Database Version: 05082020
