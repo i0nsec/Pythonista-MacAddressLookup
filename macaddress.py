@@ -1,84 +1,76 @@
-import ui, dialogs, sys
-import sqlite3
+import ui, dialogs, sys, sqlite3
 from random import randint
 from console import hud_alert
 from clipboard import set as Set_
 
 """
-App by: Eric @i0nsec
-App Version: 1.0
-Last updated: 11-18-2017
-Database Version: 06102017
+App by: @i0nsec
+App Version: 1.0.2
+Last updated: 05-08-2020
+Database Version: 05082020
 """
 
-Copy = False
+copy = False
 
-def GEN_LOG(err_msg):
-	
+def log_errs(err_msg):
 	# Log errors to a log file
-	try:
-		with open('ERR_LOG', 'a') as LOG_F:
-			LOG_F.write(str(err_msg)+'\n')
-	except Exception as ERR:
-		with open('ERR_LOG', 'a') as LOG_F:
-			LOG_F.write('ERROR LOG FILE:'+str(ERR))
-		
+	with open('ERR_LOG', 'a') as f_log:
+		f_log.write(str(err_msg)+'\n')
 
-def __Main__(sender):
-	global Copy
+def main(sender):
+	global copy
 	
 	# main function for everything
-	# Getting user input
 	user = sender.superview['user-input'].text
 	if not user:
 		sys.exit()
 	ml = sender.superview['main-label']
 
-	User_1 = user[:8].split(':')
-	get_results = ''.join(User_1)
+	user = user[:8].split(':')
+	user = ''.join(user)
 		
 	try:
 		# Connect to database
 		conn = sqlite3.connect('mac.db')
 		c = conn.cursor()
-		c.execute("SELECT vendor FROM mac_vendors WHERE mac=?", (get_results.upper(),))
+		c.execute("SELECT vendor FROM mac_vendors WHERE mac=?", (user.upper(),))
 		res = c.fetchone()
 		ml.text = "{}\n{}".format(str(res[0].strip()), user)
 		
 		if res:
-			Copy = True
+			copy = True
 			with open('history', 'a') as f:
-				f.write(str("{}: {}\n".format(user,res[0].strip())))
+				f.write(str("{}: {}\n".format(user, res[0].strip())))
 	except Exception as err_msg:
-		Copy = False
+		copy = False
 		ml.text = 'UnKnown Vendor'
-		GEN_LOG('__Main__'+err_msg)
+		log_errs(str(err_msg))
 	
 def Copy(sender):
-	global Copy
+	# if copy is True, copy results to clipboard
+	global copy
 	
-	# if Copy is True, copy results to clipboard
-	if Copy:
+	if copy:
 		ml = sender.superview['main-label']
 		Set_(ml.text)
 		hud_alert('Copied')
 	else:
-		hud_alert('Nothing to Copy','error')
+		hud_alert('Nothing to copy','error')
 		
 def Clear(sender):
-	global Copy
-	
 	# Clear results
+	global copy
+	
 	ml = sender.superview['main-label']
 	ml.text = 'Enter Mac Address to lookup'
 	user = sender.superview['user-input']
 	user.text = ''
 	user.placeholder = "XX:XX:XX:XX:XX:XX"
-	Copy = False
+	copy = False
 	
 def Generate_mac(sender):
-	
 	# generate a random mac address
+	
 	try:
 		user = sender.superview['user-input']
 		conn = sqlite3.connect('mac.db')
@@ -89,11 +81,11 @@ def Generate_mac(sender):
 		res = ':'.join(data[i:i+2] for i in range(0,6,2))
 		user.text = str(res)
 	except Exception as err_msg:
-		GEN_LOG('_Generate_mac'+err_msg)
+		log_errs(str(err_msg))
 	
 def History(sender):
+	# if the history file exsist, show its content
 	
-	# if the history file exsist
 	data = set([])
 	pre_set = []
 	try:
@@ -105,13 +97,13 @@ def History(sender):
 		Set_(dialogs.list_dialog(title='History', items=pre_set))
 		hud_alert('Copied')
 	except Exception as err_msg:
-		GEN_LOG('_History'+str(err_msg))
+		log_errs(str(err_msg))
 
 def Share(sender):
-	
-	# if Copy is True, share results
-	global Copy
-	if Copy:
+	# if copy is True, share results
+	global copy	
+
+	if copy:
 		ml = sender.superview['main-label']
 		dialogs.share_text(ml.text)
 	else:
