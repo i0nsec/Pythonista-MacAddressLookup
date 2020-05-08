@@ -63,7 +63,7 @@
           "frame" : "{{133, 237}, {80, 32}}",
           "border_width" : 1,
           "title" : "Lookup",
-          "action" : "__Main__",
+          "action" : "main",
           "alpha" : 1,
           "font_bold" : true,
           "class" : "Button",
@@ -206,7 +206,7 @@
           "image_name" : "iob:close_circled_24",
           "flex" : "WHTB"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -248,7 +248,7 @@
           "uuid" : "888EC97B-2F51-4B60-AC92-82BF6BA6BF30",
           "class" : "Label",
           "alignment" : "center",
-          "text" : "Database: v06102017, Vendors: 21,896",
+          "text" : "Database: v05082020, Vendors: 26,355",
           "font_size" : 13,
           "font_name" : "AvenirNext-Bold"
         },
@@ -268,7 +268,7 @@
           "uuid" : "18FB16A7-AEA2-4773-AC45-8B81C5A14918",
           "class" : "Label",
           "alignment" : "center",
-          "text" : "MD5:D41D8CD98F00B204E9800998ECF8427E",
+          "text" : "MD5:F85FED64C7344DCFE0D5B2B5ACE81DF0",
           "font_size" : 12,
           "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)"
         },
